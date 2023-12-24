@@ -49,6 +49,8 @@ INSERT INTO Tracks(name, duration, album_id)
 VALUES('car', 208, 2); 
 INSERT INTO Tracks(name, duration, album_id) 
 VALUES('На берегу неба', 178, 3); 
+INSERT INTO Tracks(name, duration, album_id) 
+VALUES('Сон мой', 223, 3);  
 
 INSERT INTO Collections(name, year_of_release) 
 VALUES('Сборник1', '2023.07.18'); 
