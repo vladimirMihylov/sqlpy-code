@@ -16,4 +16,9 @@ SELECT name
 FROM Performers
 WHERE name NOT LIKE '% %';
 
+SELECT name
+FROM Tracks
+WHERE name LIKE '%my%' 
+OR name LIKE '%мой%';
 
+-- Задание 3
