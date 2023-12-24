@@ -14,4 +14,6 @@ WHERE EXTRACT(year FROM year_of_release) BETWEEN '2018' AND '2020';
 
 SELECT name
 FROM Performers
-WHERE INSTR (name, ' ') > 0;
+WHERE name NOT LIKE '% %';
+
+
