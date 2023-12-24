@@ -10,7 +10,7 @@ WHERE duration >= 210;
 
 SELECT name
 FROM Collections
-WHERE EXTRACT(year RFOM year_of_release) BETWEEN '2018' AND '2020';
+WHERE EXTRACT(year FROM year_of_release) BETWEEN '2018' AND '2020';
 
 SELECT name
 FROM Performers
