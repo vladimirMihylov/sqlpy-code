@@ -22,5 +22,10 @@ WHERE name LIKE '%my%'
 OR name LIKE '%мой%';
 
 -- Задание 3
-SELECT name FROM Genres, 
-LEFT JOIN name ON Genres.genres_id = name.genres_id;
+SELECT name,
+COUNT (performers_id)
+FROM Genres 
+JOIN PerformersGenres ON Genres.id = PerformersGenres.genres_id
+GROUP BY Genres.name;
+
+
