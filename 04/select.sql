@@ -28,4 +28,9 @@ FROM Genres
 JOIN PerformersGenres ON Genres.id = PerformersGenres.genres_id
 GROUP BY Genres.name;
 
+SELECT COUNT (Tracks.name)
+FROM Tracks 
+JOIN Albums ON Tracks.album_id = Albums.id
+WHERE EXTRACT(year FROM Albums.year_of_release) BETWEEN '2019' AND '2020';
+
 
