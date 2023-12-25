@@ -45,4 +45,12 @@ JOIN AlbumsPerformers ON AlbumsPerformers.albums_id = Albums.id
 WHERE EXTRACT(year FROM Albums.year_of_release) != '2020'
 GROUP BY Performers.name;
 
+SELECT Collections.name
+FROM Collections
+JOIN CollectionsTracks ON Collections.id = CollectionsTracks.collections_id
+JOIN Tracks ON CollectionsTracks.tracks_id = Tracks.id 
+JOIN Albums ON Tracks.album_id = Albums.id
+JOIN AlbumsPerformers ON Albums.id = AlbumsPerformers.albums_id
+JOIN Performers ON AlbumsPerformers.performers_id = Performers.id
+WHERE Performers.name = 'Drake';
 
