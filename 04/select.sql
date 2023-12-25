@@ -33,4 +33,10 @@ FROM Tracks
 JOIN Albums ON Tracks.album_id = Albums.id
 WHERE EXTRACT(year FROM Albums.year_of_release) BETWEEN '2019' AND '2020';
 
+SELECT Albums.name,
+AVG (Tracks.duration)
+FROM Tracks
+JOIN Albums ON Tracks.album_id = Albums.id
+GROUP BY(Albums.name);
+
 
