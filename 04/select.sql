@@ -39,4 +39,10 @@ FROM Tracks
 JOIN Albums ON Tracks.album_id = Albums.id
 GROUP BY(Albums.name);
 
+SELECT Performers.name
+FROM Performers, Albums
+JOIN AlbumsPerformers ON AlbumsPerformers.albums_id = Albums.id
+WHERE EXTRACT(year FROM Albums.year_of_release) != '2020'
+GROUP BY Performers.name;
+
 
