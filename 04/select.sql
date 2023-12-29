@@ -42,7 +42,10 @@ GROUP BY(Albums.name);
 SELECT Performers.name
 FROM Performers, Albums
 JOIN AlbumsPerformers ON AlbumsPerformers.albums_id = Albums.id
-WHERE EXTRACT(year FROM Albums.year_of_release) != '2020'
+WHERE Performers.name NOT IN (
+  SELECT DISTINCT Performers.name FROM Performers
+  WHERE EXTRACT(year FROM Albums.year_of_release) = '2020'
+  )
 GROUP BY Performers.name;
 
 SELECT Collections.name
